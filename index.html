@@ -9,18 +9,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AR鸭子</title>
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.0/aframe/build/aframe-ar-nft.js"></script>
     <script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
 
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
         <a-marker type='pattern' url='res/pattern-qr-code.patt'>
             <a-entity position='-3 2 0' text="width: 5; value:你好啊，我是小曹同学"></a-entity>
-            <a-entity position='0 0 0' gltf-model="url(res/durk.gltf)"></a-entity>
+            <a-entity position='0 0 0' gltf-model="url(res/durk.gltf)" animation-mixer="loop:repeat;"></a-entity>
         </a-marker>
     </a-scene>
 </body>
